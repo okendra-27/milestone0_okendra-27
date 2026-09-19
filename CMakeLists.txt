@@ -10,6 +10,9 @@ add_library(aiworkspace
     src/Prompt.cpp
     src/Message.cpp
     src/Workspace.cpp
+    src/TextProcessor.cpp
+    src/DocumentChunk.cpp
+    src/ProcessingCore.cpp
 )
 target_include_directories(aiworkspace PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_compile_options(aiworkspace PRIVATE -Wall -Wextra -Wpedantic)

@@ -2,16 +2,25 @@
 #include <fstream>
 
 Document::Document(std::string title, std::string contents) 
-    : title_(std::move(title)),
+    : id_(title),
+    title_(std::move(title)),
     sourcePath_(),
     contents_(std::move(contents))
 {
 
 }
 
+Document::Document(std::string id, std::string title, std::string contents)
+    : id_(std::move(id)),
+    title_(std::move(title)),
+    contents_(std::move(contents))
+{
+}
+
 bool Document::operator==(const Document& other) const 
 {
-    return title_ == other.title_
+    return id_ == other.id_
+        && title_ == other.title_
         && sourcePath_ == other.sourcePath_
         && contents_ == other.contents_;
 }
@@ -51,6 +60,11 @@ const std::string& Document::title() const noexcept
     return title_;
 }
 
+const std::string& Document::id() const noexcept
+{
+    return id_;
+}
+
 const std::string& Document::sourcePath() const noexcept 
 {
     return sourcePath_;
@@ -67,6 +81,11 @@ void Document::setTitle(std::string title)
 {
     title_ = std::move(title);
   
+}
+
+void Document::setId(std::string id)
+{
+    id_ = std::move(id);
 }
 
 std::size_t Document::characterCount() const noexcept 

@@ -8,6 +8,7 @@ class Document {
 public:
     Document() = default;
     Document(std::string title, std::string contents);
+    Document(std::string id, std::string title, std::string contents);
 
     Document(const Document&) = default;
     Document(Document&&) noexcept = default;
@@ -21,14 +22,17 @@ public:
     bool load(const std::string& path);
 
     const std::string& title() const noexcept;
+    const std::string& id() const noexcept;
     const std::string& sourcePath() const noexcept;
     const std::string& contents() const noexcept;
     void setTitle(std::string title);
+    void setId(std::string id);
 
     std::size_t characterCount() const noexcept;
     bool empty() const noexcept;
 
 private:
+    std::string id_;
     std::string title_;
     std::string sourcePath_;
     std::string contents_;
