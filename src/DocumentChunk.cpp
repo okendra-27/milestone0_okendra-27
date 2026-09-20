@@ -1,4 +1,4 @@
-#include "aiws/DocumentChunk.hpp"
+#include "DocumentChunk.hpp"
 
 #include <algorithm>
 #include <cctype>

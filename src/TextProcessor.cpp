@@ -1,4 +1,4 @@
-#include "aiws/TextProcessor.hpp"
+#include "TextProcessor.hpp"
 
 #include <cctype>
 

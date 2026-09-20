@@ -1,4 +1,4 @@
-#include "aiws/Message.hpp"
+#include "Message.hpp"
 
 Message::Message(MessageRole role, std::string text) 
     :role_(role),
