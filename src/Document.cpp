@@ -1,4 +1,4 @@
-#include "Document.hpp"
+#include "aiws/Document.hpp"
 #include <fstream>
 
 Document::Document(std::string title, std::string contents) 

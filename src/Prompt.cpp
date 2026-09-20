@@ -1,4 +1,4 @@
-#include "Prompt.hpp"
+#include "aiws/Prompt.hpp"
 
 Prompt::Prompt(std::string title, std::string text) 
     : title_(std::move(title)),

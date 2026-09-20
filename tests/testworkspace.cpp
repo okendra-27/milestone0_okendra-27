@@ -2,12 +2,12 @@
 #include <iostream>
 #include <stdexcept>
 
-#include "Prompt.hpp"
-#include "Workspace.hpp"
-#include "Document.hpp"
-#include "Message.hpp"
-#include "TextProcessor.hpp"
-#include "DocumentChunk.hpp"
+#include "aiws/Prompt.hpp"
+#include "aiws/Workspace.hpp"
+#include "aiws/Document.hpp"
+#include "aiws/Message.hpp"
+#include "aiws/TextProcessor.hpp"
+#include "aiws/DocumentChunk.hpp"
 #include "aiws/processing_core.hpp"
 
 void prompt_basic_test() {
